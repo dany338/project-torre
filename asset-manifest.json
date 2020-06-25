@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/project-torre/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/project-torre/static/js/main.4e0256aa.chunk.js",
+    "main.js.map": "/project-torre/static/js/main.4e0256aa.chunk.js.map",
+    "runtime-main.js": "/project-torre/static/js/runtime-main.53d9e13d.js",
+    "runtime-main.js.map": "/project-torre/static/js/runtime-main.53d9e13d.js.map",
+    "static/js/2.c558eaef.chunk.js": "/project-torre/static/js/2.c558eaef.chunk.js",
+    "static/js/2.c558eaef.chunk.js.map": "/project-torre/static/js/2.c558eaef.chunk.js.map",
+    "index.html": "/project-torre/index.html",
+    "precache-manifest.13186cf350ced305e39b4cb653bc8c83.js": "/project-torre/precache-manifest.13186cf350ced305e39b4cb653bc8c83.js",
+    "service-worker.js": "/project-torre/service-worker.js",
+    "static/css/main.5ecd60fb.chunk.css.map": "/project-torre/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.c558eaef.chunk.js.LICENSE.txt": "/project-torre/static/js/2.c558eaef.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.53d9e13d.js",
+    "static/js/2.c558eaef.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.4e0256aa.chunk.js"
+  ]
+}
