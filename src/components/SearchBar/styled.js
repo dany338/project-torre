@@ -7,7 +7,7 @@ export const Container = styled.div`
   flex-grow: 1;
   justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 50%;
   padding: 0px 15px;
   background-color: ${props => props.theme.headerBackground} !important;
   color: ${props => props.theme.headerText};
