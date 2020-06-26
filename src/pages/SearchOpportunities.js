@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useRouteMatch }  from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useCallback }  from 'react';
 import { withRouter } from 'react-router-dom';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 /* Style Components */
@@ -10,7 +9,7 @@ import CardJob from '../components/CardJob';
 /* Services */
 import * as TorreServices from '../services';
 
-const SearchOpportunities = ({ history, match }) => {
+const SearchOpportunities = () => {
   const [ data, setData ] = useState([]);
   const [ loading, setLoading ] = useState(false);
 
@@ -35,26 +34,16 @@ const SearchOpportunities = ({ history, match }) => {
         <div style={{justifyContent: 'flex-end', width: '100%'}}>
           Loading information wait moment please...
           <SkeletonTheme color="#f42f6391" highlightColor="#444">
-            <Skeleton height={34}/>
+            <Skeleton height={34} />
           </SkeletonTheme>
         </div>
       ) : (
         <>
-          {data.map((job) => ( <CardJob key={job.id} {...job} /> ))}
+          {data.map((job) => <CardJob key={job.id} {...job} /> )}
         </>
       )}
     </Container>
   )
-};
-
-SearchOpportunities.propTypes = {
-  history: PropTypes.oneOfType([PropTypes.object]),
-  match: PropTypes.oneOfType([PropTypes.object]),
-};
-
-SearchOpportunities.defaultProps = {
-  history: {},
-  match: {},
 };
 
 export default withRouter(SearchOpportunities);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback }  from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 /* Style Components */
@@ -11,7 +11,7 @@ const SearchBar = ({ text }) => {
     <Container>
       <ItemLeft>
         <Icon className="right">search</Icon>
-        <input type="text" placeholder={`Search ${text}`} maxLength="Infinity" tabIndex="0" autoComplete="off"></input>
+        <input type="text" placeholder={`Search ${text}`} maxLength="Infinity" tabIndex="0" autoComplete="off" />
       </ItemLeft>
     </Container>
   )

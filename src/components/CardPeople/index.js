@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState, useEffect, useCallback, useRouteMatch }  from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 /* Style Components */
@@ -14,7 +14,7 @@ const CardPeople = ({ subjectId, remoter, locationName, name, professionalHeadli
       <div className="sectionOne">
         <ItemLeft>
           <div className="right img">
-            <div className="hexagon-border"></div>
+            <div className="hexagon-border" />
             <img id={subjectId} src={picture} alt="Image Job" />
           </div>
           <div className="info">
@@ -25,7 +25,7 @@ const CardPeople = ({ subjectId, remoter, locationName, name, professionalHeadli
         </ItemLeft>
       </div>
       <div className="sectionTwo">
-        {skills.slice(0, 3).map((skill) => (<Skill {...skill} /> ) )}
+        {skills.slice(0, 3).map((skill) => <Skill key={skill.code} {...skill} /> )}
       </div>
       <div className="sectionThree">
         <ItemRight>

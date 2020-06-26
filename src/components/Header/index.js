@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback }  from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 /* Style Components */

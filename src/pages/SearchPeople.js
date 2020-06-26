@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useCallback, useRouteMatch }  from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect, useCallback }  from 'react';
 import { withRouter } from 'react-router-dom';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 /* Style Components */
@@ -10,7 +9,7 @@ import CardPeople from '../components/CardPeople';
 /* Services */
 import * as TorreServices from '../services';
 
-const SearchPeople = ({ history, match }) => {
+const SearchPeople = () => {
   const [ data, setData ] = useState([]);
   const [ loading, setLoading ] = useState(false);
 
@@ -35,26 +34,16 @@ const SearchPeople = ({ history, match }) => {
         <div style={{justifyContent: 'flex-end', width: '100%'}}>
           Loading information wait moment please...
           <SkeletonTheme color="#f42f6391" highlightColor="#444">
-            <Skeleton height={34}/>
+            <Skeleton height={34} />
           </SkeletonTheme>
         </div>
       ) : (
         <>
-          {data.map((people) => ( <CardPeople key={people.subjectId} {...people} /> ))}
+          {data.map((people) => <CardPeople key={people.subjectId} {...people} /> )}
         </>
       )}
     </Container>
   )
-};
-
-SearchPeople.propTypes = {
-  history: PropTypes.oneOfType([PropTypes.object]),
-  match: PropTypes.oneOfType([PropTypes.object]),
-};
-
-SearchPeople.defaultProps = {
-  history: {},
-  match: {},
 };
 
 export default withRouter(SearchPeople);

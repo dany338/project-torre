@@ -17,3 +17,5 @@ export const Icon = styled.i`
     font-feature-settings: 'liga';
     margin: auto 0;
 `;
+
+export default Icon;

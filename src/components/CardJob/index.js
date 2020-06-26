@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React, { useState, useEffect, useCallback, useRouteMatch }  from 'react';
+import React  from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 /* Style Components */
@@ -15,7 +15,7 @@ const CardJob = ({ id, objective, type, organizations, compensation }) => {
       <div className="sectionOne">
         <ItemLeft>
           <div className="right img">
-            <div className="hexagon-border"></div>
+            <div className="hexagon-border" />
             <img id={organizationId} src={picture} alt="Image Job" />
           </div>
           <div className="info">
@@ -29,7 +29,7 @@ const CardJob = ({ id, objective, type, organizations, compensation }) => {
         </ItemRight>
       </div>
       <div className="sectionTwo">
-        <span className="second-text">Compensation: { (compensation && (`${compensation.data.minAmount} to ${compensation.data.maxAmount}`)) ?? 'to be defined'}</span>
+        <span className="second-text">Compensation: { (compensation && (`${compensation.data?.minAmount} to ${compensation.data?.maxAmount}`)) ?? 'to be defined'}</span>
       </div>
       <div className="sectionThree">
         <ItemRight>

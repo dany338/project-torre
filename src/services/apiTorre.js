@@ -1,20 +1,22 @@
-import { TORRE_URL_API, TORRE_URL_API_SEARCH } from '../config/const';
+import { TORRE_URL_API, TORRE_URL_API_SEARCH, TORRE_URL_API_JOBS } from '../config/const';
 /* Defined Endpoints */
 import endpoints from '../config/endpoints';
 
 const apiHeaders = {
   'Content-Type': 'application/json',
   Accept: 'application/json',
-  // Authorization: '',
 };
 
 const fetchParams = (method, data = '') => {
   const body = data ? { body: JSON.stringify(data) } : {};
 
+  const newApiHeaders = new Headers();
+  newApiHeaders.append("Content-Type", "application/json");
+  newApiHeaders.append("Accept", "application/json");
   return {
     method,
-    headers: apiHeaders,
-    // credentials: 'same-origin',
+    headers: newApiHeaders,
+    credentials: 'same-origin',
     ...body,
   };
 };
@@ -44,7 +46,7 @@ export const apiTorre = {
   },
   getsJobInformation: async id => {
     try {
-      const response = await fetch(`${TORRE_URL_API}${endpoints.torre.getsJobInformation}/${id}`, fetchParams('GET'));
+      const response = await fetch(`${TORRE_URL_API_JOBS}${endpoints.torre.getsJobInformation}/${id}`, fetchParams('GET'));
       if (!response.ok || response.status === 404 || response.status === 403 || response.status === 409 || response.status === 500 ) {
         const data = await response.json();
         if (typeof data.error !== 'undefined') {
